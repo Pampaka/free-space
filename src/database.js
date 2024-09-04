@@ -9,9 +9,12 @@ const sequelize = new Sequelize({
 	password: config.database.password,
 	dialect: "postgres"
 });
+exports.sequelize = sequelize;
+
+require("./models");
 
 const connect = async () => {
 	await sequelize.authenticate();
 };
 
-module.exports = { sequelize, connect };
+module.exports = { connect };
