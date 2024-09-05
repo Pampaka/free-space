@@ -6,6 +6,11 @@ const config = {
 		name: process.env.DB_NAME || "postgres",
 		user: process.env.DB_USER || "postgres",
 		password: process.env.DB_PASSWORD || "password"
+	},
+	redis: {
+		host: process.env.REDIS_HOST || "localhost",
+		port: process.env.REDIS_PORT || 6379,
+		password: process.env.REDIS_PASSWORD || "password"
 	}
 };
 

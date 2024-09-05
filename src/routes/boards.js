@@ -1,8 +1,9 @@
 const { Router } = require("express");
-const controller = require("../controllers/boards-controller");
+const boardsController = require("../controllers/boards-controller");
 
 const router = Router();
 
-router.get("/", controller.findBoards.bind(controller));
+router.get("/", boardsController.findBoards.bind(boardsController));
+router.get("/import-miro", boardsController.importMiroBoards.bind(boardsController));
 
 module.exports = router;

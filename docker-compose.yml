@@ -1,0 +1,42 @@
+version: "3.0"
+
+networks:
+    free-space:
+
+services:
+    postgres:
+        container_name: postgres
+        hostname: postgres
+        image: postgres:14.4
+        restart: always
+        environment:
+            - POSTGRES_USER=free-space
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_DB=free-space
+            - PGDATA=/var/lib/postgresql/data/pgdata
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+        ports:
+            - "5480:5432"
+        networks:
+            - free-space
+
+    redis:
+        image: redis:7.2-rc1-alpine
+        restart: always
+        container_name: redis
+        hostname: redis
+        environment:
+            - REDIS_PASSWORD=${REDIS_PASSWORD}
+        ports:
+            - "6380:6379"
+        volumes:
+            - redis:/data
+            - redis-conf:/usr/local/etc/redis/redis.conf
+        networks:
+            - free-space
+
+volumes:
+    pgdata:
+    redis:
+    redis-conf:

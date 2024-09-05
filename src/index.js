@@ -5,9 +5,12 @@ const router = require("./routes");
 const { errorHandler } = require("./middlewares/error-handler");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const { redisClient } = require("./redis");
 
 const start = async () => {
-	// await database.connect();
+	await database.connect();
+	await redisClient.connect();
+
 	const app = express();
 
 	app.use(bodyParser.json());
