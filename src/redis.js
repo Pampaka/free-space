@@ -6,6 +6,6 @@ const client = redis.createClient({
 });
 
 client.on("error", e => console.error(`Redis Client error: ${e?.message}`));
-client.on("ready", () => console.info(`Redis Client connected - ${config.redis.url}`));
+client.on("ready", () => console.info("Redis Client connected"));
 
 module.exports = { redisClient: client };
