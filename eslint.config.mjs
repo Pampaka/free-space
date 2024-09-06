@@ -22,7 +22,7 @@ export default [
 		rules: {
 			semi: ["error", "always"],
 			"no-undef": "error",
-			"no-unused-vars": ["error", { vars: "all", args: "none" }],
+			"no-unused-vars": ["error", { vars: "all", args: "none", caughtErrors: "none" }],
 			"no-constant-condition": "off",
 			"no-empty": ["error", { allowEmptyCatch: true }],
 			"no-async-promise-executor": "off"
