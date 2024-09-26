@@ -1,0 +1,13 @@
+.error {
+    display: flex;
+    column-gap: 16px;
+    border: 1px solid var(--border-danger);
+    border-radius: 8px;
+    background-color: var(--bg-danger);
+    color: var(--text-primary-on-color);
+    padding: 24px;
+
+    svg {
+        font-size: 20px;
+    }
+}

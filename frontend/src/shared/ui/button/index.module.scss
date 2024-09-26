@@ -1,0 +1,20 @@
+.button {
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+	border-radius: 6px;
+	background-color: var(--button-primary);
+	height: 32px;
+	padding: 4px 16px;
+	border: none;
+	color: var(--text-primary-on-color);
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--button-primary-hover);
+	}
+
+	&:active {
+		background-color: var(--button-primary-active);
+	}
+}

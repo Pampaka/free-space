@@ -4,7 +4,7 @@ const { User } = require("../models");
 const tokensService = require("./tokens-service");
 
 class AuthService {
-	async login(login, password) {
+	async signIn(login, password) {
 		const user = await User.findOne({ where: { login } });
 		if (!user) {
 			throw new UnauthorizedError(

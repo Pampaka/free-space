@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Single+Day&display=swap');
+
+:root {
+	--font-primary: Montserrat;
+	--font-logo: Poor Story;
+}
+
+html[theme='light'] {
+	--text-brand: #00df9c;
+	--text-brand-hover: #00c78b;
+	--text-brand-active: #009266;
+	--text-primary: #000000;
+	--text-primary-hover: #3a3a3a;
+	--text-primary-active: #000000;
+	--text-primary-on-color: #ffffff;
+	--text-danger: #f72424;
+
+	--bg-default: #f8f8f8;
+	--bg-primary: #ffffff;
+	--bg-primary-hover: #f0f0f0;
+	--bg-primary-active: #e3e3e3;
+	--bg-danger: #fc9494;
+
+	--button-primary: #00df9c;
+	--button-primary-hover: #00c489;
+	--button-primary-active: #00c489;
+
+	--border-primary: #d1d1d1;
+	--border-primary-active: #00df9c;
+	--border-danger: #f72424;
+
+	--icon-primary: #000000;
+	--icon-primary-hover: #3a3a3a;
+	--icon-primary-on-color: #ffffff;
+
+	--shadow-primary: 4px 4px 7px -2px rgba(34, 60, 80, 0.25);
+}
+
+html[theme='dark'] {
+	--text-brand: #00dd9b;
+	--text-brand-hover: #00c78b;
+	--text-brand-active: #00e9a3;
+	--text-primary: #ffffff;
+	--text-primary-hover: #a8a8a8;
+	--text-primary-on-color: #ffffff;
+	--text-danger: #e44747;
+
+	--bg-default: #222222;
+	--bg-primary: #2e2e2e;
+	--bg-danger: #fc7070;
+
+	--button-primary: #00bb83;
+	--button-primary-hover: #00a573;
+	--button-primary-active: #00a573;
+
+	--border-primary: #575757;
+	--border-danger: #e63f3f;
+
+	--icon-primary: #ffffff;
+	--icon-primary-hover: #a8a8a8;
+	--icon-primary-on-color: #ffffff;
+
+	--shadow-primary: 0 0 1px 1px rgba(105, 105, 105, 0.644);
+}

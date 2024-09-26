@@ -9,9 +9,9 @@ class AuthController {
 		secure: true
 	};
 
-	async login(req, res, next) {
+	async signIn(req, res, next) {
 		try {
-			const { accessToken, refreshToken } = await authService.login(
+			const { accessToken, refreshToken } = await authService.signIn(
 				req.body.login,
 				req.body.password
 			);

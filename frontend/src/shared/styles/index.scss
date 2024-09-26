@@ -1,0 +1,36 @@
+@import './root.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: var(--bg-default);
+	font-family: var(--font-primary);
+	color: var(--text-primary);
+	font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-primary);
+	transition: 0.15s;
+
+	&:hover {
+		color: var(--text-primary-hover);
+	}
+
+	&:active {
+		color: var(--text-primary-active);
+	}
+}
