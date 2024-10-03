@@ -1,2 +1,2 @@
 export const HOME_ROUTE = "/";
-export const AUTH_ROUTE = "/auth";
+export const SIGN_IN_ROUTE = "/sign-in";

@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef } from "react";
 import classNames from "classnames";
-import style from "./index.module.css";
+import style from "./index.module.scss";
 
 export interface FormProps extends ComponentPropsWithRef<"form"> {}
 
