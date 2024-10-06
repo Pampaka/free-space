@@ -24,10 +24,10 @@ const configuration = registerAs(Providers.APP_CONFIG, () => {
 			}/${process.env.DB_NAME || "free_space"}`
 		},
 		jwt: {
-			accessSecret: process.env.JWT_ACCESS_SECRET || "ACCESS",
-			refreshSecret: process.env.JWT_REFRESH_SECRET || "REFRESH",
-			expiresTime: Number(process.env.JWT_EXPIRES_TIME) || 3600000,
-			refreshExpiresTime: 30 * 24 * 60 * 60 * 1000
+			refreshExpires: Number(process.env.JWT_REFRESH_EXPIRES) || 30 * 24 * 60 * 60 * 1000,
+			accessExpires: Number(process.env.JWT_ACCESS_EXPIRES) || 10 * 60 * 1000,
+			refreshSecret: process.env.JWT_REFRESH_SECRET || "secret",
+			accessSecret: process.env.JWT_ACCESS_SECRET || "secret"
 		}
 	};
 });
