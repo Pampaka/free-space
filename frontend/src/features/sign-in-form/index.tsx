@@ -4,6 +4,7 @@ import { Input } from "shared/ui/input";
 import { Button } from "shared/ui/button";
 import { ErrorMessage } from "shared/ui/error-message";
 import { Loader } from "shared/ui/loader";
+import style from "./index.module.scss";
 
 export const SignInForm = () => {
 	const {
@@ -14,10 +15,21 @@ export const SignInForm = () => {
 
 	return (
 		<Form onSubmit={submit}>
-			<Input error={errors.login?.message} {...fields.login} />
-			<Input error={errors.password?.message} {...fields.password} />
+			<Input
+				error={errors.login?.message}
+				placeholder="Логин"
+				autoComplete="username"
+				{...fields.login}
+			/>
+			<Input
+				error={errors.password?.message}
+				placeholder="Пароль"
+				autoComplete="current-password"
+				type="password"
+				{...fields.password}
+			/>
 			<ErrorMessage error={errors.root?.serverError?.message} />
-			<Button>{isSubmitting ? <Loader /> : "Войти"}</Button>
+			<Button className={style.submit}>{isSubmitting ? <Loader /> : "Войти"}</Button>
 		</Form>
 	);
 };

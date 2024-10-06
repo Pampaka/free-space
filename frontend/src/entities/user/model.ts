@@ -6,7 +6,7 @@ import { TokenPayload } from "./types";
 class UserService {
 	login: string = "";
 	isAuth: boolean = false;
-	roleId: number = 0;
+	isAdmin: boolean = false;
 
 	constructor() {
 		makeAutoObservable(this, {
@@ -31,7 +31,7 @@ class UserService {
 
 	setUser(user: TokenPayload) {
 		this.login = user.login;
-		this.roleId = user.roleId;
+		this.isAdmin = user.isAdmin;
 		this.isAuth = true;
 	}
 

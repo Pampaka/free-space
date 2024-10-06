@@ -6,6 +6,7 @@ const SignInPage = () => {
 	return (
 		<div className={style.page}>
 			<Card className={style.card}>
+				<h1 className={style.title}>Вход</h1>
 				<SignInForm />
 			</Card>
 		</div>
