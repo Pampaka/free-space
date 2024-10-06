@@ -11,12 +11,23 @@ const configuration = registerAs(Providers.APP_CONFIG, () => {
 			levels: getLogLevels(process.env.LOG_LEVEL),
 			colorized: process.env.LOG_COLORIZE === "true"
 		},
+		user: {
+			name: "Администратор",
+			login: process.env.USER_LOGIN || "admin",
+			password: process.env.USER_PASS || "password"
+		},
 		db: {
-			host: process.env.DB_HOST || "localhost",
-			port: Number(process.env.DB_PORT) || 5432,
-			user: process.env.DB_USER || "postgres",
-			password: process.env.DB_PASSWORD || "password",
-			name: process.env.DB_NAME || "postgres"
+			uri: `mongodb://${process.env.DB_USER || "free_space_user"}:${
+				process.env.DB_PASSWORD || "password"
+			}@${process.env.DB_HOST || "localhost"}:${
+				process.env.DB_PORT || "27017"
+			}/${process.env.DB_NAME || "free_space"}`
+		},
+		jwt: {
+			accessSecret: process.env.JWT_ACCESS_SECRET || "ACCESS",
+			refreshSecret: process.env.JWT_REFRESH_SECRET || "REFRESH",
+			expiresTime: Number(process.env.JWT_EXPIRES_TIME) || 3600000,
+			refreshExpiresTime: 30 * 24 * 60 * 60 * 1000
 		}
 	};
 });
