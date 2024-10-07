@@ -3,7 +3,9 @@ import { AuthService } from "./auth.service";
 import { SignInDto } from "./dto/sign-in.dto";
 import { CookieOptions, Request, Response } from "express";
 import { AppConfigType, configuration } from "config/configuration";
+import { Public } from "./decorators/public.decorator";
 
+@Public()
 @Controller("auth")
 export class AuthController {
 	private readonly TOKEN_KEY = "refresh_token_fs";
