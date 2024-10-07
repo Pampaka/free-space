@@ -39,8 +39,8 @@ export class TokensService {
 	async saveToken(user: Types.ObjectId, refreshToken: string): Promise<TokenDocument> {
 		try {
 			const updatedToken = await this.tokenModel.findOneAndUpdate(
-				{ refreshToken },
 				{ user },
+				{ refreshToken },
 				{ new: true }
 			);
 			if (updatedToken) return updatedToken;
