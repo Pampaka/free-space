@@ -25,7 +25,7 @@ export class AuthGuard implements CanActivate {
 			throw new UnauthorizedException("Пользователь не авторизован");
 		}
 
-		const payload = await this.tokensService.verifyAccessToken(token);
+		const payload = this.tokensService.verifyAccessToken(token);
 
 		if (!payload) {
 			throw new UnauthorizedException("Пользователь не авторизован");
