@@ -4,7 +4,7 @@ import { IS_ADMIN_KEY } from "../decorators/admin.decorator";
 import { TokenPayload } from "tokens/token.types";
 
 @Injectable()
-export class RolesGuard implements CanActivate {
+export class AdminGuard implements CanActivate {
 	constructor(private reflector: Reflector) {}
 
 	async canActivate(context: ExecutionContext): Promise<boolean> {
