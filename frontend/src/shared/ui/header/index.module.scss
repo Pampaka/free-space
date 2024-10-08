@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    height: 80px;
+    padding: 0 24px;
+    width: 100%;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}

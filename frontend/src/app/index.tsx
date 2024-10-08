@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import "shared/styles";
 import { Loader } from "shared/ui/loader";
 import { useTheme } from "shared/ui/theme-toggle";
+import { Layout } from "widgets/layout";
 
 export const App = () => {
 	useTheme();
@@ -22,8 +23,10 @@ export const App = () => {
 	}
 
 	return (
-		<BrowserRouter>
-			<Routing />
-		</BrowserRouter>
+		<Layout>
+			<BrowserRouter>
+				<Routing />
+			</BrowserRouter>
+		</Layout>
 	);
 };
