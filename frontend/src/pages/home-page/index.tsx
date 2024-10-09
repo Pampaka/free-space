@@ -1,7 +1,8 @@
 import { BoardCard, BoardsGrid, useBoards } from "entities/board";
 import style from "./index.module.scss";
+import { layoutSettings } from "widgets/layout";
 
-const HomePage = () => {
+const HomePage = layoutSettings(() => {
 	const { boards } = useBoards();
 
 	return (
@@ -13,6 +14,6 @@ const HomePage = () => {
 			</BoardsGrid>
 		</div>
 	);
-};
+});
 
 export default HomePage;
