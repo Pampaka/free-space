@@ -1,16 +1,21 @@
-import type { ComponentPropsWithoutRef } from "react";
 import type { Board } from "../types";
 import style from "./index.module.scss";
 import classNames from "classnames";
+import { Link, LinkProps } from "react-router-dom";
+import { BOARD_ROUTE } from "shared/constants/routes";
 
-export interface BoardCardProps extends ComponentPropsWithoutRef<"div"> {
+export interface BoardCardProps extends Omit<LinkProps, "to"> {
 	board: Board;
 }
 
 export const BoardCard = ({ className, board, ...props }: BoardCardProps) => {
 	return (
-		<div className={classNames(style.boardCard, className)} {...props}>
+		<Link
+			className={classNames(style.boardCard, className)}
+			{...props}
+			to={BOARD_ROUTE.replace(":id", board._id)}
+		>
 			{board.name}
-		</div>
+		</Link>
 	);
 };
