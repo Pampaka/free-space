@@ -1,7 +1,7 @@
-import type { Board } from "../types";
 import style from "./index.module.scss";
 import classNames from "classnames";
 import { Link, LinkProps } from "react-router-dom";
+import type { Board } from "shared/api";
 import { BOARD_ROUTE } from "shared/constants/routes";
 
 export interface BoardCardProps extends Omit<LinkProps, "to"> {

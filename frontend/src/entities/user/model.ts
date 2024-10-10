@@ -1,6 +1,6 @@
 import { jwtDecode } from "jwt-decode";
 import { makeAutoObservable } from "mobx";
-import { refresh, signIn } from "shared/api/auth";
+import { refresh, signIn } from "shared/api";
 import { TokenPayload } from "./types";
 
 class UserService {
