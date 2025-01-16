@@ -1,6 +1,6 @@
 import { Prop, raw, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { HydratedDocument, Model, Types } from "mongoose";
-import { ComponentType } from "./constants";
+import { ComponentType } from "./const";
 
 export type ComponentDocument = HydratedDocument<Component>;
 export type ComponentModel = Model<Component>;
